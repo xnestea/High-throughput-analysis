@@ -6,6 +6,6 @@ metadata <- subset(metadata, Characteristics.developmental.stage. %in% c("embryo
 metadata <- subset(metadata, Characteristics.organism.part. %in% c("liver"))
 list_of_names <- metadata$Scan.Name
 list_of_names <- substr(list_of_names, start = 1, stop = 6)
-counts <- subset(counts, colnames(counts) %in% c(list_of_names))
+counts[, colnames = colnames(counts) %in% c(list_of_names)]
 #deseq <- DESeqDataSetFromMatrix(countData=counts, colData=metadata, design= ~Characteristics.developmental.stage.)
 
