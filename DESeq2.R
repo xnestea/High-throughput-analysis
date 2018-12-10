@@ -7,10 +7,10 @@ BiocManager::install("DESeq2", version = "3.8")
 library(DESeq2)
 
 ### set working directory to the folder containg data files (matadata and so on)
-setwd("project_HT/Data/")
+setwd("./High-throughput-analysis/")
 
 ### read table with number of reads for genes in form of matrix
-counts <- as.matrix(read.csv(file = "raw/genes.raw.htseq2.tsv",sep = "\t", row.names = 1))
+counts <- as.matrix(read.csv(file = "genes.raw.htseq2.tsv",sep = "\t", row.names = 1))
 
 ### read in metadata file and restrict it to data we are interested in
 ### also drop technical duplicates since there are not present in count matrix
